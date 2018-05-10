@@ -58,38 +58,7 @@ NSMutableArray *vArray = [NSMutableArray array];
     return [OpenCVHelper UIImageFromCVMat:srcMat];
 }
 
-
-+ (UIImage *)detectKeypoints:(UIImage *)srcImage
-{
-    cv::Mat srcMat = [OpenCVHelper cvMatFromUIImage:srcImage];
-    
-    // detector 生成 ORB AKAZE
-    cv::Ptr<cv::ORB> detector = cv::ORB::create();
-    
-    // 特徴点抽出
-    std::vector<cv::KeyPoint> keypoints;
-    detector->detect(srcMat, keypoints);
-    
-    //printf("%lu keypoints are detected.\n", keypoints.size());
-    
-    // 特徴点を描画
-    cv::Mat dstMat;
-    
-    dstMat = srcMat.clone();
-    for(int i = 0; i < keypoints.size(); i++) {
-        if(i > 12) { break; }
-        cv::KeyPoint *point = &(keypoints[i]);
-        cv::Point center;
-        int radius;
-        center.x = cvRound(point->pt.x);
-        center.y = cvRound(point->pt.y);
-        radius = cvRound(point->size*0.25);
-        cv::circle(dstMat, center, radius, cvScalar(255,255,0));
-    }
-    return [OpenCVHelper UIImageFromCVMat:dstMat];
-}
-
-+ (void)keyPointsInt:(UIImage *) srcImage success:(ReturnKeyPointsBlock)success
++ (void)keyPoints:(UIImage *) srcImage success:(ReturnKeyPointsBlock)success
 {
     cv::Mat srcMat = [OpenCVHelper cvMatFromUIImage:srcImage];
     
@@ -102,10 +71,19 @@ NSMutableArray *vArray = [NSMutableArray array];
     
     // 特徴点を描画
     [mdic removeAllObjects];
-
+    // 特徴点を描画
+    cv::Mat dstMat;
+    
+    dstMat = srcMat.clone();
     for(int i = 0; i < keypoints.size(); i++) {
-        if(i > 12) { break; }
+        if(i > 9) { break; }
         cv::KeyPoint *point = &(keypoints[i]);
+        cv::Point center;
+        int radius;
+        center.x = cvRound(point->pt.x);
+        center.y = cvRound(point->pt.y);
+        radius = cvRound(point->size*0.25);
+        cv::circle(dstMat, center, radius, cvScalar(255,255,0));
         [xArray addObject:[NSString stringWithFormat:@"%u", cvRound(point->pt.x)]];
         [yArray addObject:[NSString stringWithFormat:@"%u", cvRound(point->pt.y)]];
         [vArray addObject:[NSString stringWithFormat:@"%u", cvRound(point->size*0.25)]];
@@ -113,7 +91,8 @@ NSMutableArray *vArray = [NSMutableArray array];
     [mdic setObject:xArray forKey:@"x"];
     [mdic setObject:yArray forKey:@"y"];
     [mdic setObject:vArray forKey:@"v"];
-    
+    [mdic setObject:[OpenCVHelper UIImageFromCVMat:dstMat] forKey:@"image"];
+
     success(true,mdic);
 }
 

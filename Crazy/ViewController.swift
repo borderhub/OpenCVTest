@@ -119,95 +119,96 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
                     try requestHandler.perform([request], on: pixelBuffer)
                     let ciimage : CIImage = CIImage(cvPixelBuffer: pixelBuffer)
                     image = self.convert(cmage: ciimage)
-                    self.ImageView.image = OpenCVWrapper.detectKeypoints(image)
-                    self.ImageView.frame = CGRect(x:0, y:0, width: self.view.frame.width, height: self.view.frame.height)
                     //if self.counter % 60 == 0 {
                         OpenCVWrapper.resetKeyPoints()
                         self.sineWaveReset(); self.sineWaveStop()
-                        OpenCVWrapper.keyPointsInt(image, success: {(success, options) in
+                        OpenCVWrapper.keyPoints(image, success: {(success, options) in
                             DispatchQueue.main.asyncAfter(deadline: .now() + 0.0, execute: {
-                                var y:[String] = options?["y"]! as! [String], oY = NSOrderedSet(array: y), uY = oY.array as! [String]; //uY = uY.shuffled()
-                                var x:[String] = options?["x"]! as! [String], oX = NSOrderedSet(array: x), uX = oX.array as! [String]; //uX = uX.shuffled()
-                                var v:[String] = options?["v"]! as! [String], oV = NSOrderedSet(array: v), uV = oV.array as! [String]; //uV = uV.shuffled()
                                 if success {
-                                    let volume:Float = Float(0.4)
+                                    var y:[String] = options?["y"]! as! [String], oY = NSOrderedSet(array: y), uY = oY.array as! [String]; //uY = uY.shuffled()
+                                    var x:[String] = options?["x"]! as! [String], oX = NSOrderedSet(array: x), uX = oX.array as! [String]; //uX = uX.shuffled()
+                                    var v:[String] = options?["v"]! as! [String], oV = NSOrderedSet(array: v), uV = oV.array as! [String]; //uV = uV.shuffled()
+                                    var img:UIImage = options?["image"]! as! UIImage
+                                    self.ImageView.image = img
+                                    self.ImageView.frame = CGRect(x:0, y:0, width: self.view.frame.width, height: self.view.frame.height)
                                     if uY.count > 0 {
+                                        let volume:Float = Float(/*0.4*/Int(uV[0])!/8)
                                         for (i, value) in uY.enumerated() {
                                             guard i >= 0 && i < uX.count else { return }
                                             let pixelColor = self.image.getColor(pos: CGPoint(x:Int(uX[i])!, y:Int(uY[i])!))
                                             let hzValue = Double(pixelColor.red + pixelColor.green + pixelColor.blue)*1.25
-                                            //print("x \(Int(uX[i])!) y \(Int(uY[i])!) delayTime \(Double(Float(uY.count)*Float(uV.count)/50)) feedback \(Float(uY.count)/Float(uV.count)/100) pixelColor \(pixelColor) hzValue \(hzValue)")
+                                            //print("x \(Int(uX[i])!) y \(Int(uY[i])!) v \(Int(uV[0])!) delayTime \(Double(Float(uY.count)*Float(uV.count)/50)) feedback \(Float(uY.count)/Float(uV.count)/100) pixelColor \(pixelColor) hzValue \(hzValue)")
                                             switch i {
                                             case 0 :
-                                                self.sinewave = SineWave(volume: volume, hz: Float(hzValue), delayTime: Double(Float(uY.count)*Float(uV.count)/50), feedback: Float(uY.count)/Float(uV.count)/100)
+                                                self.sinewave = SineWave(volume: volume, hz: Float(hzValue), delayTime: Double(Float(uY.count)*Float(uV.count)/50), feedback: Float(uY.count)/Float(uV.count)/100,frequency: [pixelColor.blue, pixelColor.green*5, pixelColor.red*30])
                                                 self.sinewave.play()
                                                 break
                                             case 1 :
-                                                self.sinewave1 = SineWave(volume: volume, hz: Float(hzValue), delayTime: Double(Float(uY.count)*Float(uV.count)/50), feedback: Float(uY.count)/Float(uV.count)/100)
+                                                self.sinewave1 = SineWave(volume: volume, hz: Float(hzValue), delayTime: Double(Float(uY.count)*Float(uV.count)/50), feedback: Float(uY.count)/Float(uV.count)/100,frequency: [pixelColor.blue, pixelColor.green*5, pixelColor.red*30])
                                                 self.sinewave1.play()
                                                 break
                                             case 2 :
-                                                self.sinewave2 = SineWave(volume: volume, hz: Float(hzValue), delayTime: Double(Float(uY.count)*Float(uV.count)/50), feedback: Float(uY.count)/Float(uV.count)/100)
+                                                self.sinewave2 = SineWave(volume: volume, hz: Float(hzValue), delayTime: Double(Float(uY.count)*Float(uV.count)/50), feedback: Float(uY.count)/Float(uV.count)/100,frequency: [pixelColor.blue, pixelColor.green*5, pixelColor.red*30])
                                                 self.sinewave2.play()
                                                 break
                                             case 3 :
-                                                self.sinewave3 = SineWave(volume: volume, hz: Float(hzValue), delayTime: Double(Float(uY.count)*Float(uV.count)/50), feedback: Float(uY.count)/Float(uV.count)/100)
+                                                self.sinewave3 = SineWave(volume: volume, hz: Float(hzValue), delayTime: Double(Float(uY.count)*Float(uV.count)/50), feedback: Float(uY.count)/Float(uV.count)/100,frequency: [pixelColor.blue, pixelColor.green*5, pixelColor.red*30])
                                                 self.sinewave3.play()
                                                 break
                                             case 4 :
-                                                self.sinewave4 = SineWave(volume: volume, hz: Float(hzValue), delayTime: Double(Float(uY.count)*Float(uV.count)/50), feedback: Float(uY.count)/Float(uV.count)/100)
+                                                self.sinewave4 = SineWave(volume: volume, hz: Float(hzValue), delayTime: Double(Float(uY.count)*Float(uV.count)/50), feedback: Float(uY.count)/Float(uV.count)/100,frequency: [pixelColor.blue, pixelColor.green*5, pixelColor.red*30])
                                                 self.sinewave4.play()
                                                 break
                                             case 5 :
-                                                self.sinewave5 = SineWave(volume: volume, hz: Float(hzValue), delayTime: Double(Float(uY.count)*Float(uV.count)/50), feedback: Float(uY.count)/Float(uV.count)/100)
+                                                self.sinewave5 = SineWave(volume: volume, hz: Float(hzValue), delayTime: Double(Float(uY.count)*Float(uV.count)/50), feedback: Float(uY.count)/Float(uV.count)/100,frequency: [pixelColor.blue, pixelColor.green*5, pixelColor.red*30])
                                                 self.sinewave5.play()
                                                 break
                                             case 6 :
-                                                self.sinewave6 = SineWave(volume: volume, hz: Float(hzValue), delayTime: Double(Float(uY.count)*Float(uV.count)/50), feedback: Float(uY.count)/Float(uV.count)/100)
+                                                self.sinewave6 = SineWave(volume: volume, hz: Float(hzValue), delayTime: Double(Float(uY.count)*Float(uV.count)/50), feedback: Float(uY.count)/Float(uV.count)/100,frequency: [pixelColor.blue, pixelColor.green*5, pixelColor.red*30])
                                                 self.sinewave6.play()
                                                 break
                                             case 7 :
-                                                self.sinewave7 = SineWave(volume: volume, hz: Float(hzValue), delayTime: Double(Float(uY.count)*Float(uV.count)/50), feedback: Float(uY.count)/Float(uV.count)/100)
+                                                self.sinewave7 = SineWave(volume: volume, hz: Float(hzValue), delayTime: Double(Float(uY.count)*Float(uV.count)/50), feedback: Float(uY.count)/Float(uV.count)/100,frequency: [pixelColor.blue, pixelColor.green*5, pixelColor.red*30])
                                                 self.sinewave7.play()
                                                 break
                                             case 8 :
-                                                self.sinewave8 = SineWave(volume: volume, hz: Float(hzValue), delayTime: Double(Float(uY.count)*Float(uV.count)/50), feedback: Float(uY.count)/Float(uV.count)/100)
+                                                self.sinewave8 = SineWave(volume: volume, hz: Float(hzValue), delayTime: Double(Float(uY.count)*Float(uV.count)/50), feedback: Float(uY.count)/Float(uV.count)/100,frequency: [pixelColor.blue, pixelColor.green*5, pixelColor.red*30])
                                                 self.sinewave8.play()
                                                 break
                                             case 9 :
-                                                self.sinewave9 = SineWave(volume: volume, hz: Float(hzValue), delayTime: Double(Float(uY.count)*Float(uV.count)/50), feedback: Float(uY.count)/Float(uV.count)/100)
+                                                self.sinewave9 = SineWave(volume: volume, hz: Float(hzValue), delayTime: Double(Float(uY.count)*Float(uV.count)/50), feedback: Float(uY.count)/Float(uV.count)/100,frequency: [pixelColor.blue, pixelColor.green*5, pixelColor.red*30])
                                                 self.sinewave9.play()
                                                 break
                                             case 10 :
-                                                self.sinewave10 = SineWave(volume: volume, hz: Float(hzValue), delayTime: Double(Float(uY.count)*Float(uV.count)/50), feedback: Float(uY.count)/Float(uV.count)/100)
+                                                self.sinewave10 = SineWave(volume: volume, hz: Float(hzValue), delayTime: Double(Float(uY.count)*Float(uV.count)/50), feedback: Float(uY.count)/Float(uV.count)/100,frequency: [pixelColor.blue, pixelColor.green*5, pixelColor.red*30])
                                                 self.sinewave10.play()
                                                 break
                                             case 11 :
-                                                self.sinewave11 = SineWave(volume: volume, hz: Float(hzValue), delayTime: Double(Float(uY.count)*Float(uV.count)/50), feedback: Float(uY.count)/Float(uV.count)/100)
+                                                self.sinewave11 = SineWave(volume: volume, hz: Float(hzValue), delayTime: Double(Float(uY.count)*Float(uV.count)/50), feedback: Float(uY.count)/Float(uV.count)/100,frequency: [pixelColor.blue, pixelColor.green*5, pixelColor.red*30])
                                                 self.sinewave11.play()
                                                 break
                                             case 12 :
-                                                self.sinewave12 = SineWave(volume: volume, hz: Float(hzValue), delayTime: Double(Float(uY.count)*Float(uV.count)/50), feedback: Float(uY.count)/Float(uV.count)/100)
+                                                self.sinewave12 = SineWave(volume: volume, hz: Float(hzValue), delayTime: Double(Float(uY.count)*Float(uV.count)/50), feedback: Float(uY.count)/Float(uV.count)/100,frequency: [pixelColor.blue, pixelColor.green*5, pixelColor.red*30])
                                                 self.sinewave12.play()
                                                 break
                                             case 13 :
-                                                self.sinewave13 = SineWave(volume: volume, hz: Float(hzValue), delayTime: Double(Float(uY.count)*Float(uV.count)/50), feedback: Float(uY.count)/Float(uV.count)/100)
+                                                self.sinewave13 = SineWave(volume: volume, hz: Float(hzValue), delayTime: Double(Float(uY.count)*Float(uV.count)/50), feedback: Float(uY.count)/Float(uV.count)/100,frequency: [pixelColor.blue, pixelColor.green*5, pixelColor.red*30])
                                                 self.sinewave13.play()
                                                 break
                                             case 14 :
-                                                self.sinewave14 = SineWave(volume: volume, hz: Float(hzValue), delayTime: Double(Float(uY.count)*Float(uV.count)/50), feedback: Float(uY.count)/Float(uV.count)/100)
+                                                self.sinewave14 = SineWave(volume: volume, hz: Float(hzValue), delayTime: Double(Float(uY.count)*Float(uV.count)/50), feedback: Float(uY.count)/Float(uV.count)/100,frequency: [pixelColor.blue, pixelColor.green*5, pixelColor.red*30])
                                                 self.sinewave14.play()
                                                 break
                                             case 15 :
-                                                self.sinewave15 = SineWave(volume: volume, hz: Float(hzValue), delayTime: Double(Float(uY.count)*Float(uV.count)/50), feedback: Float(uY.count)/Float(uV.count)/100)
+                                                self.sinewave15 = SineWave(volume: volume, hz: Float(hzValue), delayTime: Double(Float(uY.count)*Float(uV.count)/50), feedback: Float(uY.count)/Float(uV.count)/100,frequency: [pixelColor.blue, pixelColor.green*5, pixelColor.red*30])
                                                 self.sinewave15.play()
                                                 break
                                             case 16 :
-                                                self.sinewave16 = SineWave(volume: volume, hz: Float(hzValue), delayTime: Double(Float(uY.count)*Float(uV.count)/50), feedback: Float(uY.count)/Float(uV.count)/100)
+                                                self.sinewave16 = SineWave(volume: volume, hz: Float(hzValue), delayTime: Double(Float(uY.count)*Float(uV.count)/50), feedback: Float(uY.count)/Float(uV.count)/100,frequency: [pixelColor.blue, pixelColor.green*5, pixelColor.red*30])
                                                 self.sinewave16.play()
                                                 break
                                             case 17 :
-                                                self.sinewave17 = SineWave(volume: volume, hz: Float(hzValue), delayTime: Double(Float(uY.count)*Float(uV.count)/50), feedback: Float(uY.count)/Float(uV.count)/100)
+                                                self.sinewave17 = SineWave(volume: volume, hz: Float(hzValue), delayTime: Double(Float(uY.count)*Float(uV.count)/50), feedback: Float(uY.count)/Float(uV.count)/100,frequency: [pixelColor.blue, pixelColor.green*5, pixelColor.red*30])
                                                 self.sinewave17.play()
                                                 break
                                             default:

@@ -20,10 +20,8 @@
 + (UIImage *)match :(UIImage *)srcImage templateImage:(UIImage *)templateImage;
 
 // function do detect feature points
-+ (UIImage *)detectKeypoints:(UIImage *)srcImage;
-
 typedef void(^ReturnKeyPointsBlock)(BOOL success, NSDictionary* options);
-+ (void)keyPointsInt:(UIImage *) srcImage success:(ReturnKeyPointsBlock)success;
++ (void)keyPoints:(UIImage *) srcImage success:(ReturnKeyPointsBlock)success;
 
 + (void)resetKeyPoints;
 
