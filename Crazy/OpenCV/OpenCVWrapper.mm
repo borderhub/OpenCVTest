@@ -76,17 +76,17 @@ NSMutableArray *vArray = [NSMutableArray array];
     
     dstMat = srcMat.clone();
     for(int i = 0; i < keypoints.size(); i++) {
-        if(i > 9) { break; }
+        if(i > 3) { break; }
         cv::KeyPoint *point = &(keypoints[i]);
         cv::Point center;
         int radius;
         center.x = cvRound(point->pt.x);
         center.y = cvRound(point->pt.y);
-        radius = cvRound(point->size*0.25);
+        radius = cvRound(point->size*0.45);
         cv::circle(dstMat, center, radius, cvScalar(255,255,0));
-        [xArray addObject:[NSString stringWithFormat:@"%u", cvRound(point->pt.x)]];
-        [yArray addObject:[NSString stringWithFormat:@"%u", cvRound(point->pt.y)]];
-        [vArray addObject:[NSString stringWithFormat:@"%u", cvRound(point->size*0.25)]];
+        [xArray addObject:[NSString stringWithFormat:@"%u", center.x]];
+        [yArray addObject:[NSString stringWithFormat:@"%u", center.y]];
+        [vArray addObject:[NSString stringWithFormat:@"%u", radius]];
     }
     [mdic setObject:xArray forKey:@"x"];
     [mdic setObject:yArray forKey:@"y"];
