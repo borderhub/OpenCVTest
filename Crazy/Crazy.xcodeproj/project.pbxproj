@@ -1,0 +1,766 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1C7906E8A05CC154352BC32D /* Pods_Crazy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DB01EDED66F9B754A3442DB /* Pods_Crazy.framework */; };
+		5CE6881AA98DA8BDB67AE27F /* Pods_CrazyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F9DB49B2E439690F0944D23 /* Pods_CrazyUITests.framework */; };
+		90236C0620A00A1C00CF545A /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 90236C0520A00A1C00CF545A /* OpenCVWrapper.mm */; };
+		90236C0820A00D2F00CF545A /* OpenCVHelper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 90236C0720A00D2F00CF545A /* OpenCVHelper.mm */; };
+		90314ED320A07959001DA123 /* SineWave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90314ED220A07959001DA123 /* SineWave.swift */; };
+		90586F74208C42A800E34CA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90586F73208C42A800E34CA0 /* AppDelegate.swift */; };
+		90586F76208C42A800E34CA0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90586F75208C42A800E34CA0 /* ViewController.swift */; };
+		90586F79208C42A800E34CA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90586F77208C42A800E34CA0 /* Main.storyboard */; };
+		90586F7C208C42A800E34CA0 /* Crazy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 90586F7A208C42A800E34CA0 /* Crazy.xcdatamodeld */; };
+		90586F7E208C42A900E34CA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90586F7D208C42A900E34CA0 /* Assets.xcassets */; };
+		90586F81208C42A900E34CA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90586F7F208C42A900E34CA0 /* LaunchScreen.storyboard */; };
+		90586F8C208C42A900E34CA0 /* CrazyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90586F8B208C42A900E34CA0 /* CrazyTests.swift */; };
+		90586F97208C42A900E34CA0 /* CrazyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90586F96208C42A900E34CA0 /* CrazyUITests.swift */; };
+		90C3406A20A2AC5D00D1EE93 /* UIImage+PixelColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C3406920A2AC5D00D1EE93 /* UIImage+PixelColor.swift */; };
+		C50BB628C767BBDB19FA3E27 /* Pods_CrazyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 524D1A34C75F6B9906B33C46 /* Pods_CrazyTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		90586F88208C42A900E34CA0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 90586F68208C42A800E34CA0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 90586F6F208C42A800E34CA0;
+			remoteInfo = Crazy;
+		};
+		90586F93208C42A900E34CA0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 90586F68208C42A800E34CA0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 90586F6F208C42A800E34CA0;
+			remoteInfo = Crazy;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		054C9B7CCFD447F5CEFB0548 /* Pods-Crazy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Crazy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Crazy/Pods-Crazy.debug.xcconfig"; sourceTree = "<group>"; };
+		2B50657C6DCEF4F707D3F1CF /* Pods-CrazyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrazyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CrazyTests/Pods-CrazyTests.release.xcconfig"; sourceTree = "<group>"; };
+		3F9DB49B2E439690F0944D23 /* Pods_CrazyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CrazyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		524D1A34C75F6B9906B33C46 /* Pods_CrazyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CrazyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		90236C0320A00A1B00CF545A /* Crazy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Crazy-Bridging-Header.h"; sourceTree = "<group>"; };
+		90236C0420A00A1C00CF545A /* OpenCVWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenCVWrapper.h; sourceTree = "<group>"; };
+		90236C0520A00A1C00CF545A /* OpenCVWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVWrapper.mm; sourceTree = "<group>"; };
+		90236C0720A00D2F00CF545A /* OpenCVHelper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVHelper.mm; sourceTree = "<group>"; };
+		90236C0920A00D6A00CF545A /* OpenCVHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenCVHelper.h; sourceTree = "<group>"; };
+		90314ED220A07959001DA123 /* SineWave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SineWave.swift; sourceTree = "<group>"; };
+		90586F70208C42A800E34CA0 /* Crazy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crazy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		90586F73208C42A800E34CA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		90586F75208C42A800E34CA0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		90586F78208C42A800E34CA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		90586F7B208C42A800E34CA0 /* Crazy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Crazy.xcdatamodel; sourceTree = "<group>"; };
+		90586F7D208C42A900E34CA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		90586F80208C42A900E34CA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		90586F82208C42A900E34CA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90586F87208C42A900E34CA0 /* CrazyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrazyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		90586F8B208C42A900E34CA0 /* CrazyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrazyTests.swift; sourceTree = "<group>"; };
+		90586F8D208C42A900E34CA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90586F92208C42A900E34CA0 /* CrazyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrazyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		90586F96208C42A900E34CA0 /* CrazyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrazyUITests.swift; sourceTree = "<group>"; };
+		90586F98208C42A900E34CA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90C3406920A2AC5D00D1EE93 /* UIImage+PixelColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+PixelColor.swift"; sourceTree = "<group>"; };
+		9DB01EDED66F9B754A3442DB /* Pods_Crazy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Crazy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE1B04C72484EE68FEA303ED /* Pods-CrazyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrazyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CrazyUITests/Pods-CrazyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CA1F6FD7DB05DFD936069A6A /* Pods-Crazy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Crazy.release.xcconfig"; path = "Pods/Target Support Files/Pods-Crazy/Pods-Crazy.release.xcconfig"; sourceTree = "<group>"; };
+		D78A7A8E8D37A46AC9A98D8E /* Pods-CrazyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrazyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CrazyUITests/Pods-CrazyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E9D358A8ECA5774BACA83761 /* Pods-CrazyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrazyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CrazyTests/Pods-CrazyTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		90586F6D208C42A800E34CA0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C7906E8A05CC154352BC32D /* Pods_Crazy.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90586F84208C42A900E34CA0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C50BB628C767BBDB19FA3E27 /* Pods_CrazyTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90586F8F208C42A900E34CA0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CE6881AA98DA8BDB67AE27F /* Pods_CrazyUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1108C46F00295A6EC867AFF7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				054C9B7CCFD447F5CEFB0548 /* Pods-Crazy.debug.xcconfig */,
+				CA1F6FD7DB05DFD936069A6A /* Pods-Crazy.release.xcconfig */,
+				E9D358A8ECA5774BACA83761 /* Pods-CrazyTests.debug.xcconfig */,
+				2B50657C6DCEF4F707D3F1CF /* Pods-CrazyTests.release.xcconfig */,
+				D78A7A8E8D37A46AC9A98D8E /* Pods-CrazyUITests.debug.xcconfig */,
+				BE1B04C72484EE68FEA303ED /* Pods-CrazyUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7F8956333BD4A465DBA61652 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9DB01EDED66F9B754A3442DB /* Pods_Crazy.framework */,
+				524D1A34C75F6B9906B33C46 /* Pods_CrazyTests.framework */,
+				3F9DB49B2E439690F0944D23 /* Pods_CrazyUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		90236C0220A0093700CF545A /* OpenCV */ = {
+			isa = PBXGroup;
+			children = (
+				90236C0420A00A1C00CF545A /* OpenCVWrapper.h */,
+				90236C0520A00A1C00CF545A /* OpenCVWrapper.mm */,
+				90236C0320A00A1B00CF545A /* Crazy-Bridging-Header.h */,
+				90236C0720A00D2F00CF545A /* OpenCVHelper.mm */,
+				90236C0920A00D6A00CF545A /* OpenCVHelper.h */,
+			);
+			path = OpenCV;
+			sourceTree = "<group>";
+		};
+		90314ED120A07947001DA123 /* SineWave */ = {
+			isa = PBXGroup;
+			children = (
+				90314ED220A07959001DA123 /* SineWave.swift */,
+			);
+			path = SineWave;
+			sourceTree = "<group>";
+		};
+		90586F67208C42A800E34CA0 = {
+			isa = PBXGroup;
+			children = (
+				90586F72208C42A800E34CA0 /* Crazy */,
+				90586F8A208C42A900E34CA0 /* CrazyTests */,
+				90586F95208C42A900E34CA0 /* CrazyUITests */,
+				90586F71208C42A800E34CA0 /* Products */,
+				1108C46F00295A6EC867AFF7 /* Pods */,
+				7F8956333BD4A465DBA61652 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		90586F71208C42A800E34CA0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				90586F70208C42A800E34CA0 /* Crazy.app */,
+				90586F87208C42A900E34CA0 /* CrazyTests.xctest */,
+				90586F92208C42A900E34CA0 /* CrazyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		90586F72208C42A800E34CA0 /* Crazy */ = {
+			isa = PBXGroup;
+			children = (
+				90C3406820A2AC4900D1EE93 /* Helper */,
+				90314ED120A07947001DA123 /* SineWave */,
+				90236C0220A0093700CF545A /* OpenCV */,
+				90586F73208C42A800E34CA0 /* AppDelegate.swift */,
+				90586F75208C42A800E34CA0 /* ViewController.swift */,
+				90586F77208C42A800E34CA0 /* Main.storyboard */,
+				90586F7D208C42A900E34CA0 /* Assets.xcassets */,
+				90586F7F208C42A900E34CA0 /* LaunchScreen.storyboard */,
+				90586F82208C42A900E34CA0 /* Info.plist */,
+				90586F7A208C42A800E34CA0 /* Crazy.xcdatamodeld */,
+			);
+			path = Crazy;
+			sourceTree = "<group>";
+		};
+		90586F8A208C42A900E34CA0 /* CrazyTests */ = {
+			isa = PBXGroup;
+			children = (
+				90586F8B208C42A900E34CA0 /* CrazyTests.swift */,
+				90586F8D208C42A900E34CA0 /* Info.plist */,
+			);
+			path = CrazyTests;
+			sourceTree = "<group>";
+		};
+		90586F95208C42A900E34CA0 /* CrazyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				90586F96208C42A900E34CA0 /* CrazyUITests.swift */,
+				90586F98208C42A900E34CA0 /* Info.plist */,
+			);
+			path = CrazyUITests;
+			sourceTree = "<group>";
+		};
+		90C3406820A2AC4900D1EE93 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				90C3406920A2AC5D00D1EE93 /* UIImage+PixelColor.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		90586F6F208C42A800E34CA0 /* Crazy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90586F9B208C42A900E34CA0 /* Build configuration list for PBXNativeTarget "Crazy" */;
+			buildPhases = (
+				A250300BCFA38BD477645F0E /* [CP] Check Pods Manifest.lock */,
+				90586F6C208C42A800E34CA0 /* Sources */,
+				90586F6D208C42A800E34CA0 /* Frameworks */,
+				90586F6E208C42A800E34CA0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Crazy;
+			productName = Crazy;
+			productReference = 90586F70208C42A800E34CA0 /* Crazy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		90586F86208C42A900E34CA0 /* CrazyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90586F9E208C42A900E34CA0 /* Build configuration list for PBXNativeTarget "CrazyTests" */;
+			buildPhases = (
+				4FEA60B6DC475135A07381B0 /* [CP] Check Pods Manifest.lock */,
+				90586F83208C42A900E34CA0 /* Sources */,
+				90586F84208C42A900E34CA0 /* Frameworks */,
+				90586F85208C42A900E34CA0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				90586F89208C42A900E34CA0 /* PBXTargetDependency */,
+			);
+			name = CrazyTests;
+			productName = CrazyTests;
+			productReference = 90586F87208C42A900E34CA0 /* CrazyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		90586F91208C42A900E34CA0 /* CrazyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90586FA1208C42A900E34CA0 /* Build configuration list for PBXNativeTarget "CrazyUITests" */;
+			buildPhases = (
+				2434CA30D589D253568D730C /* [CP] Check Pods Manifest.lock */,
+				90586F8E208C42A900E34CA0 /* Sources */,
+				90586F8F208C42A900E34CA0 /* Frameworks */,
+				90586F90208C42A900E34CA0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				90586F94208C42A900E34CA0 /* PBXTargetDependency */,
+			);
+			name = CrazyUITests;
+			productName = CrazyUITests;
+			productReference = 90586F92208C42A900E34CA0 /* CrazyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		90586F68208C42A800E34CA0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = Monogs;
+				TargetAttributes = {
+					90586F6F208C42A800E34CA0 = {
+						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
+					};
+					90586F86208C42A900E34CA0 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 90586F6F208C42A800E34CA0;
+					};
+					90586F91208C42A900E34CA0 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 90586F6F208C42A800E34CA0;
+					};
+				};
+			};
+			buildConfigurationList = 90586F6B208C42A800E34CA0 /* Build configuration list for PBXProject "Crazy" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 90586F67208C42A800E34CA0;
+			productRefGroup = 90586F71208C42A800E34CA0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				90586F6F208C42A800E34CA0 /* Crazy */,
+				90586F86208C42A900E34CA0 /* CrazyTests */,
+				90586F91208C42A900E34CA0 /* CrazyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		90586F6E208C42A800E34CA0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90586F81208C42A900E34CA0 /* LaunchScreen.storyboard in Resources */,
+				90586F7E208C42A900E34CA0 /* Assets.xcassets in Resources */,
+				90586F79208C42A800E34CA0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90586F85208C42A900E34CA0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90586F90208C42A900E34CA0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2434CA30D589D253568D730C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CrazyUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4FEA60B6DC475135A07381B0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CrazyTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A250300BCFA38BD477645F0E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Crazy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		90586F6C208C42A800E34CA0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90C3406A20A2AC5D00D1EE93 /* UIImage+PixelColor.swift in Sources */,
+				90586F76208C42A800E34CA0 /* ViewController.swift in Sources */,
+				90586F7C208C42A800E34CA0 /* Crazy.xcdatamodeld in Sources */,
+				90236C0620A00A1C00CF545A /* OpenCVWrapper.mm in Sources */,
+				90314ED320A07959001DA123 /* SineWave.swift in Sources */,
+				90236C0820A00D2F00CF545A /* OpenCVHelper.mm in Sources */,
+				90586F74208C42A800E34CA0 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90586F83208C42A900E34CA0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90586F8C208C42A900E34CA0 /* CrazyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90586F8E208C42A900E34CA0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90586F97208C42A900E34CA0 /* CrazyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		90586F89208C42A900E34CA0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 90586F6F208C42A800E34CA0 /* Crazy */;
+			targetProxy = 90586F88208C42A900E34CA0 /* PBXContainerItemProxy */;
+		};
+		90586F94208C42A900E34CA0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 90586F6F208C42A800E34CA0 /* Crazy */;
+			targetProxy = 90586F93208C42A900E34CA0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		90586F77208C42A800E34CA0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				90586F78208C42A800E34CA0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		90586F7F208C42A900E34CA0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				90586F80208C42A900E34CA0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		90586F99208C42A900E34CA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		90586F9A208C42A900E34CA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		90586F9C208C42A900E34CA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 054C9B7CCFD447F5CEFB0548 /* Pods-Crazy.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LS73QDR33P;
+				INFOPLIST_FILE = Crazy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.monogs.app02.Crazy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Crazy/OpenCV/Crazy-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		90586F9D208C42A900E34CA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA1F6FD7DB05DFD936069A6A /* Pods-Crazy.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LS73QDR33P;
+				INFOPLIST_FILE = Crazy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.monogs.app02.Crazy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Crazy/OpenCV/Crazy-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		90586F9F208C42A900E34CA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9D358A8ECA5774BACA83761 /* Pods-CrazyTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LS73QDR33P;
+				INFOPLIST_FILE = CrazyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.monogs.app02.CrazyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Crazy.app/Crazy";
+			};
+			name = Debug;
+		};
+		90586FA0208C42A900E34CA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B50657C6DCEF4F707D3F1CF /* Pods-CrazyTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LS73QDR33P;
+				INFOPLIST_FILE = CrazyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.monogs.app02.CrazyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Crazy.app/Crazy";
+			};
+			name = Release;
+		};
+		90586FA2208C42A900E34CA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D78A7A8E8D37A46AC9A98D8E /* Pods-CrazyUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LS73QDR33P;
+				INFOPLIST_FILE = CrazyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.monogs.app02.CrazyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Crazy;
+			};
+			name = Debug;
+		};
+		90586FA3208C42A900E34CA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE1B04C72484EE68FEA303ED /* Pods-CrazyUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LS73QDR33P;
+				INFOPLIST_FILE = CrazyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.monogs.app02.CrazyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Crazy;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		90586F6B208C42A800E34CA0 /* Build configuration list for PBXProject "Crazy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90586F99208C42A900E34CA0 /* Debug */,
+				90586F9A208C42A900E34CA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		90586F9B208C42A900E34CA0 /* Build configuration list for PBXNativeTarget "Crazy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90586F9C208C42A900E34CA0 /* Debug */,
+				90586F9D208C42A900E34CA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		90586F9E208C42A900E34CA0 /* Build configuration list for PBXNativeTarget "CrazyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90586F9F208C42A900E34CA0 /* Debug */,
+				90586FA0208C42A900E34CA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		90586FA1208C42A900E34CA0 /* Build configuration list for PBXNativeTarget "CrazyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90586FA2208C42A900E34CA0 /* Debug */,
+				90586FA3208C42A900E34CA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		90586F7A208C42A800E34CA0 /* Crazy.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				90586F7B208C42A800E34CA0 /* Crazy.xcdatamodel */,
+			);
+			currentVersion = 90586F7B208C42A800E34CA0 /* Crazy.xcdatamodel */;
+			path = Crazy.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 90586F68208C42A800E34CA0 /* Project object */;
+}
