@@ -76,7 +76,7 @@ NSMutableArray *vArray = [NSMutableArray array];
     
     dstMat = srcMat.clone();
     for(int i = 0; i < keypoints.size(); i++) {
-        if(i > 3) { break; }
+        if(i > 6) { break; }
         cv::KeyPoint *point = &(keypoints[i]);
         cv::Point center;
         int radius;
