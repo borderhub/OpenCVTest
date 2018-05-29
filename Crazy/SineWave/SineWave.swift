@@ -33,7 +33,7 @@ class SineWave {
             eq.bands[i].filterType = .parametric
         }
         eq.bands[0].gain = Float(freqs[0]/100)//0.0
-        eq.bands[1].gain = Float(freqs[1]/600)//0.0
+        eq.bands[1].gain = Float(freqs[1]/1600)//0.0
         eq.bands[2].gain = Float(freqs[2]/3000)//0.0
 
         //delayの設定
@@ -115,7 +115,6 @@ class SineWave {
             } else if self.cnt > 5 {
                 self.player.volume = 0
                 self.audioEngine.mainMixerNode.outputVolume = 0
-                //t.invalidate()
                 self.player.stop()
             }
         }
